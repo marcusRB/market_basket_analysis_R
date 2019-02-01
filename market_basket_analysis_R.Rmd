@@ -1,0 +1,56 @@
+---
+title: "market_basket_analysis_R"
+output: html_document
+---
+
+# Dataset
+
+Implementing MBA/Association Rule Mining using R
+In this tutorial, you will use a dataset from the UCI Machine Learning Repository. The dataset is called Online-Retail, and you can download it from here. The dataset contains transaction data from 01/12/2010 to 09/12/2011 for a UK-based registered non-store online retail. The reason for using this and not R dataset is that you are more likely to receive retail data in this form on which you will have to apply data pre-processing.
+
+
+
+# Loading Libraries
+First, you will load the libraries required. A short description of the libraries (taken from Here) is given in the following table, so you know what each library does:
+
+Package	Description
+arules	Provides the infrastructure for representing, manipulating and analyzing transaction data and patterns (frequent itemsets and association rules).
+arulesViz	Extends package 'arules' with various visualization techniques for association rules and item-sets. The package also includes several interactive visualizations for rule exploration.
+tidyverse	The tidyverse is an opinionated collection of R packages designed for data science
+readxl	Read Excel Files in R
+plyr	Tools for Splitting, Applying and Combining Data
+ggplot2	Create graphics and charts
+knitr	Dynamic Report generation in R
+lubridate	Lubridate is an R package that makes it easier to work with dates and times.
+
+
+
+```{r setup, include=FALSE}
+
+#install and load package arules
+#install.packages("arules")
+library(arules)
+#install and load arulesViz
+#install.packages("arulesViz")
+library(arulesViz)
+#install and load tidyverse
+#install.packages("tidyverse")
+library(tidyverse)
+#install and load readxml
+#install.packages("readxml")
+library(readxl)
+#install and load knitr
+#install.packages("knitr")
+library(knitr)
+#load ggplot2 as it comes in tidyverse
+library(ggplot2)
+#install and load lubridate
+#install.packages("lubridate")
+library(lubridate)
+#install and load plyr
+#install.packages("plyr")
+library(plyr)
+library(dplyr)
+```
+
+
